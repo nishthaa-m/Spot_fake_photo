@@ -5,7 +5,7 @@ A lightweight computer vision system to detect whether an image is a **REAL** ph
 ---
 
 ## 🎥 Live Demo Video
-> 🔗 **[Click here to watch the Live Demo Video](PASTE_YOUR_RECORDED_VIDEO_LINK_HERE)**
+> 🔗 **[Click here to watch the Live Demo Video](https://drive.google.com/file/d/1JxaSlTv4mDReV_-l0iZHEYckj2bhV0LM/view?usp=sharing)**
 
 ---
 
