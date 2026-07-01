@@ -13,7 +13,7 @@ This report summarizes the implementation, validation accuracy, performance metr
 
 ## 2. Honest Accuracy
 * **Evaluation Protocol**: Evaluated using **5-fold GroupKFold cross-validation** (grouped by parent image) to prevent data leakage.
-* **Accuracy & AUC**: Achieved **80.0% validation accuracy** and **87.2% AUC-ROC** on the 100-image dataset (all taken with the same `realme 10 Pro 5G` camera).
+* **Accuracy & AUC**: Achieved **80.0% validation accuracy** and **87.2% AUC-ROC** on the 100-image dataset (all taken with the same phone camera).
 * **Limitations**: Pre-trained ImageNet CNNs are optimized to discard high-frequency grids and compression noise. At $N=100$, the model relies on secondary features (glare, colors, bezels). 
 
 ---
