@@ -41,3 +41,15 @@ This report summarizes the implementation, validation accuracy, performance metr
 * **Cheater Adaptation**: Implement an active learning loop where low-confidence predictions (scores in $[0.5, 0.85]$) are flagged for human moderation and fed back into training daily.
 * **On-Device Optimization**: Export the model to **ONNX / TFLite** and apply INT8 quantization. This reduces model size from 21 MB to **~5 MB** and CPU latency to **<10 ms**.
 * **Fraud Cutoff Strategy**: Auto-reject if score $> 0.85$ (FPR $< 1\%$); score $[0.50, 0.85]$ triggers a quick liveness check (e.g. "tilt the camera" to verify perspective change); score $< 0.50$ is accepted.
+
+---
+
+## 6. Optional: Live Camera Web Demo
+We included an interactive local live scanner web page to demonstrate the model:
+1. **To Start the Server**: Run `python app.py` from the repository root.
+2. **Access the Demo**: Open `http://localhost:5000` in your web browser.
+3. **Features**:
+   - Camera selection dropdown for front/back webcams.
+   - **Scan Frame**: Capture the current feed and return the fraud score.
+   - **Auto-Scan Toggle**: Continuous 1Hz real-time scanner updating a glassmorphic circular progress gauge and status badge (Safe/Suspicious/Fraud) in real-time.
+
